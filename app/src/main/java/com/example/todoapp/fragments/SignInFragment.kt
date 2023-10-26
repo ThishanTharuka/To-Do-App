@@ -37,32 +37,39 @@ class SignInFragment : Fragment() {
         registerEvents()
     }
 
-    private fun init(view: View){
+    private fun init(view: View) {
         navControl = Navigation.findNavController(view)
         auth = FirebaseAuth.getInstance()
     }
 
-    private fun registerEvents(){
+    private fun registerEvents() {
 
         binding.signupBtn.setOnClickListener {
             navControl.navigate(R.id.action_signInFragment_to_signUpFragment)
         }
 
         binding.signInBtn.setOnClickListener {
-            val email = binding.emailText.text. toString().trim()
-            val password = binding.passwordText.text. toString().trim()
+            val email = binding.emailText.text.toString().trim()
+            val password = binding.passwordText.text.toString().trim()
 
-            if(email.isNotEmpty() && password.isNotEmpty()){
-                    auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(
-                        OnCompleteListener {
-                            if (it.isSuccessful){
-                                Toast.makeText(context, "Logged In Successfully", Toast.LENGTH_SHORT).show()
-                                navControl.navigate(R.id.action_signInFragment_to_homeFragment)
-                            } else{
-                                Toast.makeText(context, it.exception?.message, Toast.LENGTH_SHORT).show()
-                            }
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(
+                    OnCompleteListener {
+                        if (it.isSuccessful) {
+                            Toast.makeText(context, "Logged In Successfully.", Toast.LENGTH_SHORT)
+                                .show()
+                            navControl.navigate(R.id.action_signInFragment_to_homeFragment)
+                        } else {
+                            Toast.makeText(
+                                context,
+                                "Invalid login credentials!",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
-                    )
+                    }
+                )
+            } else {
+                Toast.makeText(context, "Empty fields are not allowed.", Toast.LENGTH_SHORT).show()
             }
         }
     }

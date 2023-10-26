@@ -4,7 +4,8 @@ package com.example.todoapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -20,11 +21,16 @@ public final class FragmentSplashBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView textView;
+  public final ProgressBar progressBar;
 
-  private FragmentSplashBinding(@NonNull ConstraintLayout rootView, @NonNull TextView textView) {
+  @NonNull
+  public final ImageView todoLogo;
+
+  private FragmentSplashBinding(@NonNull ConstraintLayout rootView,
+      @NonNull ProgressBar progressBar, @NonNull ImageView todoLogo) {
     this.rootView = rootView;
-    this.textView = textView;
+    this.progressBar = progressBar;
+    this.todoLogo = todoLogo;
   }
 
   @Override
@@ -54,13 +60,19 @@ public final class FragmentSplashBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.textView;
-      TextView textView = ViewBindings.findChildViewById(rootView, id);
-      if (textView == null) {
+      id = R.id.progressBar;
+      ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
+      if (progressBar == null) {
         break missingId;
       }
 
-      return new FragmentSplashBinding((ConstraintLayout) rootView, textView);
+      id = R.id.todoLogo;
+      ImageView todoLogo = ViewBindings.findChildViewById(rootView, id);
+      if (todoLogo == null) {
+        break missingId;
+      }
+
+      return new FragmentSplashBinding((ConstraintLayout) rootView, progressBar, todoLogo);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

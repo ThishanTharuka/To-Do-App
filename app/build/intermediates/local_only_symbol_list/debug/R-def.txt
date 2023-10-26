@@ -99,6 +99,7 @@ id nav_graph
 id nav_host_fragment
 id passwordCard
 id passwordText
+id progressBar
 id signInBtn
 id signInFragment
 id signUpFragment

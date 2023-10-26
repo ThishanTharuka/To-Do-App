@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.SignUpFragment">
 
     <ImageView
@@ -11,7 +11,7 @@
         android:layout_width="175dp"
         android:layout_height="175dp"
         android:layout_marginStart="@dimen/image_margin"
-        android:layout_marginTop="@dimen/top_margin"
+        android:layout_marginTop="@dimen/big_top_margin"
         android:layout_marginEnd="@dimen/image_margin"
         android:contentDescription="@string/todo_image"
         android:src="@drawable/todo"
@@ -23,12 +23,12 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_top_margin"
         android:fontFamily="@font/roboto"
         android:text="@string/sign_up"
+        android:textColor="@color/md_theme_light_onPrimaryContainer"
         android:textSize="@dimen/signup_text"
         android:textStyle="bold"
-        android:layout_marginTop="@dimen/small_top_margin"
-        android:textColor="@color/md_theme_light_onPrimaryContainer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/todoLogo" />
@@ -38,7 +38,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/horizontal_margin"
-        android:layout_marginTop="@dimen/top_margin"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="@dimen/big_top_margin"
+        android:layout_marginEnd="32dp"
         app:cardCornerRadius="@dimen/card_corner_radius"
         app:cardElevation="@dimen/card_elevation"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,9 +64,11 @@
                 android:hint="@string/enter_your_email"
                 android:inputType="textEmailAddress"
                 android:paddingStart="@dimen/start_end_padding"
-                android:paddingEnd="@dimen/start_end_padding"
                 android:paddingTop="@dimen/top_bottom_padding"
-                android:paddingBottom="@dimen/top_bottom_padding">
+                android:paddingEnd="@dimen/start_end_padding"
+                android:paddingBottom="@dimen/top_bottom_padding"
+                android:textColorHint="#757575"
+                tools:ignore="VisualLintTextFieldSize">
 
             </com.google.android.material.textfield.TextInputEditText>
 
@@ -78,7 +82,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="@dimen/top_margin"
+        android:layout_marginEnd="32dp"
         app:cardCornerRadius="@dimen/card_corner_radius"
         app:cardElevation="@dimen/card_elevation"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,8 +98,8 @@
             android:background="@color/md_theme_light_onPrimary"
             app:boxStrokeWidth="0dp"
             app:boxStrokeWidthFocused="0dp"
-            app:passwordToggleEnabled="true"
-            app:hintEnabled="false">
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/passwordText"
@@ -103,9 +109,11 @@
                 android:hint="@string/enter_your_password"
                 android:inputType="textPassword"
                 android:paddingStart="@dimen/start_end_padding"
-                android:paddingEnd="@dimen/start_end_padding"
                 android:paddingTop="@dimen/top_bottom_padding"
-                android:paddingBottom="@dimen/top_bottom_padding">
+                android:paddingEnd="@dimen/start_end_padding"
+                android:paddingBottom="@dimen/top_bottom_padding"
+                android:textColorHint="#757575"
+                tools:ignore="VisualLintTextFieldSize">
 
             </com.google.android.material.textfield.TextInputEditText>
 
@@ -119,7 +127,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="@dimen/top_margin"
+        android:layout_marginEnd="32dp"
         app:cardCornerRadius="@dimen/card_corner_radius"
         app:cardElevation="@dimen/card_elevation"
         app:layout_constraintEnd_toEndOf="parent"
@@ -133,8 +143,8 @@
             android:background="@color/md_theme_light_onPrimary"
             app:boxStrokeWidth="0dp"
             app:boxStrokeWidthFocused="0dp"
-            app:passwordToggleEnabled="true"
-            app:hintEnabled="false">
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/confirmPasswordText"
@@ -146,7 +156,9 @@
                 android:paddingStart="@dimen/start_end_padding"
                 android:paddingTop="@dimen/top_bottom_padding"
                 android:paddingEnd="@dimen/start_end_padding"
-                android:paddingBottom="@dimen/top_bottom_padding">
+                android:paddingBottom="@dimen/top_bottom_padding"
+                android:textColorHint="#757575"
+                tools:ignore="VisualLintTextFieldSize">
 
             </com.google.android.material.textfield.TextInputEditText>
 
@@ -158,23 +170,24 @@
         android:id="@+id/signupBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_top_margin"
         android:fontFamily="@font/roboto"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/create_account"
         android:textAlignment="center"
-        android:layout_marginTop="@dimen/top_margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/confirmPasswordCard">
+
     </Button>
 
     <TextView
         android:id="@+id/already_registered"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_top_margin"
         android:text="@string/already_registered"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="@dimen/small_top_margin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signupBtn" />
 
