@@ -11,4 +11,8 @@
     <string name="create_account">Create Account</string>
     <string name="already_registered">Already Registered!</string>
     <string name="sign_in">Sign In</string>
+    <string name="add_task">Add Task</string>
+    <string name="add_description">Add Description</string>
+    <string name="task_name">Task Name</string>
+    <string name="clear_image">Clear Button</string>
 </resources>

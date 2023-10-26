@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/md_theme_light_background"
     tools:context=".fragments.SplashFragment">
 
     <ImageView
@@ -22,10 +23,11 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:indeterminateTint="@color/md_theme_light_primary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/todoLogo"
-        android:indeterminateTint="@color/md_theme_light_primary"/>
+        app:layout_constraintTop_toBottomOf="@+id/todoLogo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

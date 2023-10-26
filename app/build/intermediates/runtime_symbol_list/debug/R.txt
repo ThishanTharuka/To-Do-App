@@ -2994,6 +2994,7 @@ int dimen sliding_pane_detail_pane_width 0x7f07031b
 int dimen small_top_margin 0x7f07031c
 int dimen splash_text 0x7f07031d
 int dimen start_end_padding 0x7f07031e
+int dimen text_start_padding 0x7f07032a
 int dimen tooltip_corner_radius 0x7f07031f
 int dimen tooltip_horizontal_padding 0x7f070320
 int dimen tooltip_margin 0x7f070321
@@ -3086,6 +3087,10 @@ int drawable abc_textfield_search_material 0x7f080076
 int drawable abc_vector_test 0x7f080077
 int drawable avd_hide_password 0x7f080078
 int drawable avd_show_password 0x7f080079
+int drawable baseline_add_24 0x7f0800fd
+int drawable baseline_clear_24 0x7f080100
+int drawable baseline_delete_24 0x7f0800fe
+int drawable baseline_edit_24 0x7f0800ff
 int drawable btn_checkbox_checked_mtrl 0x7f08007a
 int drawable btn_checkbox_checked_to_unchecked_mtrl_animation 0x7f08007b
 int drawable btn_checkbox_unchecked_mtrl 0x7f08007c
@@ -3269,6 +3274,7 @@ int id accessibility_custom_action_9 0x7f0a002f
 int id actionDown 0x7f0a0030
 int id actionDownUp 0x7f0a0031
 int id actionUp 0x7f0a0032
+int id action_addTaskFragment_to_homeFragment 0x7f0a021b
 int id action_bar 0x7f0a0033
 int id action_bar_activity_content 0x7f0a0034
 int id action_bar_container 0x7f0a0035
@@ -3279,6 +3285,7 @@ int id action_bar_title 0x7f0a0039
 int id action_container 0x7f0a003a
 int id action_context_bar 0x7f0a003b
 int id action_divider 0x7f0a003c
+int id action_homeFragment_to_addTaskFragment 0x7f0a021c
 int id action_image 0x7f0a003d
 int id action_menu_divider 0x7f0a003e
 int id action_menu_presenter 0x7f0a003f
@@ -3295,6 +3302,10 @@ int id action_text 0x7f0a0049
 int id actions 0x7f0a004a
 int id activity_chooser_view_content 0x7f0a004b
 int id add 0x7f0a004c
+int id addTaskBtn 0x7f0a021f
+int id addTaskCard 0x7f0a0220
+int id addTaskFragment 0x7f0a0221
+int id addTaskText 0x7f0a0222
 int id adjust_height 0x7f0a004d
 int id adjust_width 0x7f0a004e
 int id alertTitle 0x7f0a004f
@@ -3378,6 +3389,7 @@ int id decelerate 0x7f0a009c
 int id decelerateAndComplete 0x7f0a009d
 int id decor_content_parent 0x7f0a009e
 int id default_activity_button 0x7f0a009f
+int id deleteTask 0x7f0a0223
 int id deltaRelative 0x7f0a00a0
 int id dependency_ordering 0x7f0a00a1
 int id design_bottom_sheet 0x7f0a00a2
@@ -3608,6 +3620,7 @@ int id progress_horizontal 0x7f0a0181
 int id radio 0x7f0a0182
 int id ratio 0x7f0a0183
 int id rectangles 0x7f0a0184
+int id recyclerView 0x7f0a0225
 int id report_drawn 0x7f0a0185
 int id reverseSawtooth 0x7f0a0186
 int id right 0x7f0a0187
@@ -3721,6 +3734,7 @@ int id title 0x7f0a01f2
 int id titleDividerNoCustom 0x7f0a01f3
 int id title_template 0x7f0a01f4
 int id todoLogo 0x7f0a01f5
+int id todoTask 0x7f0a0226
 int id toggle 0x7f0a01f6
 int id top 0x7f0a01f7
 int id topPanel 0x7f0a01f8
@@ -3892,6 +3906,8 @@ int layout design_navigation_menu 0x7f0d002b
 int layout design_navigation_menu_item 0x7f0d002c
 int layout design_text_input_end_icon 0x7f0d002d
 int layout design_text_input_start_icon 0x7f0d002e
+int layout each_todo_item 0x7f0d0073
+int layout fragment_add_task 0x7f0d0072
 int layout fragment_home 0x7f0d002f
 int layout fragment_sign_in 0x7f0d0030
 int layout fragment_sign_up 0x7f0d0031
@@ -3991,6 +4007,8 @@ int string abc_searchview_description_voice 0x7f130017
 int string abc_shareactionprovider_share_with 0x7f130018
 int string abc_shareactionprovider_share_with_application 0x7f130019
 int string abc_toolbar_collapse_description 0x7f13001a
+int string add_description 0x7f1300d0
+int string add_task 0x7f1300d1
 int string already_registered 0x7f13001b
 int string androidx_startup 0x7f13001c
 int string app_name 0x7f13001d
@@ -4011,6 +4029,7 @@ int string call_notification_screening_text 0x7f13002b
 int string character_counter_content_description 0x7f13002c
 int string character_counter_overflowed_content_description 0x7f13002d
 int string character_counter_pattern 0x7f13002e
+int string clear_image 0x7f1300d2
 int string clear_text_end_icon_content_description 0x7f13002f
 int string common_google_play_services_enable_button 0x7f130030
 int string common_google_play_services_enable_text 0x7f130031
@@ -4171,6 +4190,7 @@ int string side_sheet_behavior 0x7f1300cb
 int string sign_in 0x7f1300cc
 int string sign_up 0x7f1300cd
 int string status_bar_notification_info_overflow 0x7f1300ce
+int string task_name 0x7f1300d3
 int string todo_image 0x7f1300cf
 int style AlertDialog_AppCompat 0x7f140000
 int style AlertDialog_AppCompat_Light 0x7f140001

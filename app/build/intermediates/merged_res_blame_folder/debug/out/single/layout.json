@@ -8,16 +8,20 @@
         "source": "C:\\Users\\thish\\.gradle\\daemon\\8.0\\com.example.todoapp-main-7:\\layout\\fragment_home.xml"
     },
     {
-        "merged": "com.example.todoapp-mergeDebugResources-4:/layout/fragment_sign_up.xml",
-        "source": "com.example.todoapp-main-7:/layout/fragment_sign_up.xml"
+        "merged": "C:\\Users\\thish\\.gradle\\daemon\\8.0\\com.example.todoapp-mergeDebugResources-4:\\layout\\fragment_add_task.xml",
+        "source": "C:\\Users\\thish\\.gradle\\daemon\\8.0\\com.example.todoapp-main-7:\\layout\\fragment_add_task.xml"
     },
     {
-        "merged": "com.example.todoapp-mergeDebugResources-4:/layout/fragment_splash.xml",
-        "source": "com.example.todoapp-main-7:/layout/fragment_splash.xml"
+        "merged": "C:\\Users\\thish\\.gradle\\daemon\\8.0\\com.example.todoapp-mergeDebugResources-4:\\layout\\each_todo_item.xml",
+        "source": "C:\\Users\\thish\\.gradle\\daemon\\8.0\\com.example.todoapp-main-7:\\layout\\each_todo_item.xml"
     },
     {
         "merged": "C:\\Users\\thish\\.gradle\\daemon\\8.0\\com.example.todoapp-mergeDebugResources-4:\\layout\\fragment_sign_up.xml",
         "source": "C:\\Users\\thish\\.gradle\\daemon\\8.0\\com.example.todoapp-main-7:\\layout\\fragment_sign_up.xml"
+    },
+    {
+        "merged": "com.example.todoapp-mergeDebugResources-4:/layout/each_todo_item.xml",
+        "source": "com.example.todoapp-main-7:/layout/each_todo_item.xml"
     },
     {
         "merged": "C:\\Users\\thish\\.gradle\\daemon\\8.0\\com.example.todoapp-mergeDebugResources-4:\\layout\\fragment_splash.xml",
