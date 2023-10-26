@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "com.example.todoapp-mergeDebugResources-4:/layout/fragment_sign_up.xml",
+        "source": "com.example.todoapp-main-7:/layout/fragment_sign_up.xml"
+    },
+    {
+        "merged": "com.example.todoapp-mergeDebugResources-4:/layout/fragment_home.xml",
+        "source": "com.example.todoapp-main-7:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.example.todoapp-mergeDebugResources-4:/layout/fragment_sign_in.xml",
+        "source": "com.example.todoapp-main-7:/layout/fragment_sign_in.xml"
+    },
+    {
+        "merged": "com.example.todoapp-mergeDebugResources-4:/layout/fragment_splash.xml",
+        "source": "com.example.todoapp-main-7:/layout/fragment_splash.xml"
+    },
+    {
+        "merged": "com.example.todoapp-mergeDebugResources-4:/layout/activity_main.xml",
+        "source": "com.example.todoapp-main-7:/layout/activity_main.xml"
+    }
+]
