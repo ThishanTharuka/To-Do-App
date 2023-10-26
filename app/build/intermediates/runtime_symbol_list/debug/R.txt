@@ -3089,7 +3089,6 @@ int drawable avd_hide_password 0x7f080078
 int drawable avd_show_password 0x7f080079
 int drawable baseline_add_24 0x7f0800fd
 int drawable baseline_clear_24 0x7f080100
-int drawable baseline_delete_24 0x7f0800fe
 int drawable baseline_edit_24 0x7f0800ff
 int drawable btn_checkbox_checked_mtrl 0x7f08007a
 int drawable btn_checkbox_checked_to_unchecked_mtrl_animation 0x7f08007b

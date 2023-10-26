@@ -21,9 +21,10 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.database
 
-
+/**
+ * A fragment for displaying a list of to-do tasks and managing them.
+ */
 class HomeFragment : Fragment(), ToDoAdapter.ToDoAdapterClicksInterface {
-
 
     private lateinit var auth: FirebaseAuth
     private lateinit var databaseReference: DatabaseReference
@@ -32,7 +33,6 @@ class HomeFragment : Fragment(), ToDoAdapter.ToDoAdapterClicksInterface {
     private lateinit var adapter: ToDoAdapter
     private lateinit var mList: MutableList<ToDoData>
     private lateinit var authId: String
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -51,12 +51,19 @@ class HomeFragment : Fragment(), ToDoAdapter.ToDoAdapterClicksInterface {
         registerEvents()
     }
 
+    /**
+     * Register click events for UI components.
+     */
     private fun registerEvents() {
         binding.addTaskBtn.setOnClickListener {
             navController.navigate(R.id.action_homeFragment_to_addTaskFragment)
         }
     }
 
+    /**
+     * Initialize necessary components and resources.
+     * @param view The fragment's view.
+     */
     private fun init(view: View) {
         navController = Navigation.findNavController(view)
         auth = FirebaseAuth.getInstance()
@@ -70,6 +77,9 @@ class HomeFragment : Fragment(), ToDoAdapter.ToDoAdapterClicksInterface {
         binding.recyclerView.adapter = adapter
     }
 
+    /**
+     * Retrieve data from Firebase and populate the to-do task list.
+     */
     private fun getDataFromFirebase() {
         databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -84,16 +94,19 @@ class HomeFragment : Fragment(), ToDoAdapter.ToDoAdapterClicksInterface {
                     }
                 }
                 adapter.notifyDataSetChanged()
-
             }
 
             override fun onCancelled(error: DatabaseError) {
                 Toast.makeText(context, error.message, Toast.LENGTH_SHORT).show()
             }
-
         })
     }
 
+    /**
+     * Handle the click event when the "Delete" button is clicked for a to-do task.
+     * @param toDoData The to-do task to be deleted.
+     * @param position The position of the task in the list.
+     */
     override fun onDeleteTaskBtnClicked(toDoData: ToDoData, position: Int) {
         databaseReference.child(toDoData.taskId).removeValue().addOnCompleteListener {
             if (it.isSuccessful) {
@@ -103,5 +116,4 @@ class HomeFragment : Fragment(), ToDoAdapter.ToDoAdapterClicksInterface {
             }
         }
     }
-
 }

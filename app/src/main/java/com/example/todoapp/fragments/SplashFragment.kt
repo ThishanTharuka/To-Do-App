@@ -12,10 +12,12 @@ import androidx.navigation.Navigation
 import com.example.todoapp.R
 import com.google.firebase.auth.FirebaseAuth
 
-
+/**
+ * A fragment for displaying a splash screen and determining the navigation flow based on user authentication status.
+ */
 class SplashFragment : Fragment() {
 
-    private lateinit var auth:FirebaseAuth
+    private lateinit var auth: FirebaseAuth
     private lateinit var navController: NavController
 
     override fun onCreateView(
@@ -33,9 +35,9 @@ class SplashFragment : Fragment() {
         navController = Navigation.findNavController(view)
 
         Handler(Looper.myLooper()!!).postDelayed(Runnable {
-            if (auth.currentUser != null){
+            if (auth.currentUser != null) {
                 navController.navigate(R.id.action_splashFragment_to_homeFragment)
-            } else{
+            } else {
                 navController.navigate(R.id.action_splashFragment_to_signInFragment)
             }
         }, 2000)

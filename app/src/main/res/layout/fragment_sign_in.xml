@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/todoLogo"
-        android:layout_width="175dp"
-        android:layout_height="175dp"
+        android:layout_width="@dimen/image_width"
+        android:layout_height="@dimen/image_height"
         android:layout_marginStart="@dimen/image_margin"
         android:layout_marginTop="@dimen/big_top_margin"
         android:layout_marginEnd="@dimen/image_margin"
@@ -50,7 +50,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/text_field_height"
             android:background="@color/md_theme_light_onPrimary"
             app:boxStrokeWidth="0dp"
             app:boxStrokeWidthFocused="0dp"
@@ -91,7 +91,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/text_field_height"
             android:background="@color/md_theme_light_onPrimary"
             app:boxStrokeWidth="0dp"
             app:boxStrokeWidthFocused="0dp"

@@ -10,11 +10,13 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.todoapp.R
 import com.example.todoapp.databinding.FragmentAddTaskBinding
-import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
+/**
+ * A fragment for adding tasks to the to-do list.
+ */
 class AddTaskFragment : Fragment() {
 
     private lateinit var binding: FragmentAddTaskBinding
@@ -25,7 +27,7 @@ class AddTaskFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentAddTaskBinding.inflate(inflater, container, false)
         return binding.root
@@ -38,29 +40,38 @@ class AddTaskFragment : Fragment() {
         registerEvents()
     }
 
+    /**
+     * Initialize necessary components and resources.
+     * @param view The fragment's view.
+     */
     private fun init(view: View) {
         navController = Navigation.findNavController(view)
         auth = FirebaseAuth.getInstance()
         databaseReference =
             FirebaseDatabase.getInstance().reference.child("Tasks")
                 .child(auth.currentUser?.uid.toString())
-
     }
 
+    /**
+     * Register click events for the UI components.
+     */
     private fun registerEvents() {
         binding.addTaskBtn.setOnClickListener {
             val todoTask = binding.addTaskText.text.toString()
 
             if (todoTask.isNotEmpty()) {
-                onSaveTask(todoTask, binding.addTaskText)
+                onSaveTask(todoTask)
             } else {
                 Toast.makeText(context, "Task is empty.", Toast.LENGTH_SHORT).show()
             }
-
         }
     }
 
-    private fun onSaveTask(todo: String, addTaskText: TextInputEditText) {
+    /**
+     * Save a to-do task to the Firebase database.
+     * @param todo The to-do task to be saved.
+     */
+    private fun onSaveTask(todo: String) {
         databaseReference.push().setValue(todo).addOnCompleteListener {
             if (it.isSuccessful) {
                 Toast.makeText(context, "Todo saved successfully!", Toast.LENGTH_SHORT).show()
@@ -70,5 +81,4 @@ class AddTaskFragment : Fragment() {
             }
         }
     }
-
 }

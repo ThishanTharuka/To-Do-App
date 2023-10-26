@@ -32,10 +32,6 @@
         "source": "C:\\Users\\thish\\.gradle\\daemon\\8.0\\com.example.todoapp-main-7:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.example.todoapp-merged_res-5:/drawable_baseline_clear_24.xml.flat",
-        "source": "com.example.todoapp-main-7:/drawable/baseline_clear_24.xml"
-    },
-    {
         "merged": "C:\\Users\\thish\\.gradle\\daemon\\8.0\\com.example.todoapp-merged_res-5:\\drawable_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\thish\\.gradle\\daemon\\8.0\\com.example.todoapp-main-7:\\drawable\\ic_launcher_foreground.xml"
     },
@@ -76,6 +72,10 @@
         "source": "C:\\Users\\thish\\.gradle\\daemon\\8.0\\com.example.todoapp-main-7:\\layout\\fragment_home.xml"
     },
     {
+        "merged": "C:\\Users\\thish\\.gradle\\daemon\\8.0\\com.example.todoapp-merged_res-5:\\drawable_baseline_clear_24.xml.flat",
+        "source": "C:\\Users\\thish\\.gradle\\daemon\\8.0\\com.example.todoapp-main-7:\\drawable\\baseline_clear_24.xml"
+    },
+    {
         "merged": "C:\\Users\\thish\\.gradle\\daemon\\8.0\\com.example.todoapp-merged_res-5:\\drawable_todo.png.flat",
         "source": "C:\\Users\\thish\\.gradle\\daemon\\8.0\\com.example.todoapp-main-7:\\drawable\\todo.png"
     },
@@ -86,10 +86,6 @@
     {
         "merged": "C:\\Users\\thish\\.gradle\\daemon\\8.0\\com.example.todoapp-merged_res-5:\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\thish\\.gradle\\daemon\\8.0\\com.example.todoapp-main-7:\\mipmap-xhdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "com.example.todoapp-merged_res-5:/layout_each_todo_item.xml.flat",
-        "source": "com.example.todoapp-main-7:/layout/each_todo_item.xml"
     },
     {
         "merged": "C:\\Users\\thish\\.gradle\\daemon\\8.0\\com.example.todoapp-merged_res-5:\\mipmap-xhdpi_ic_launcher_round.webp.flat",

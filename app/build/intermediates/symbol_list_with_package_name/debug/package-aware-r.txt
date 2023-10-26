@@ -3090,7 +3090,6 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable baseline_add_24
 drawable baseline_clear_24
-drawable baseline_delete_24
 drawable baseline_edit_24
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation

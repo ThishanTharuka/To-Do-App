@@ -10,11 +10,12 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.todoapp.R
 import com.example.todoapp.databinding.FragmentSignInBinding
-import com.example.todoapp.databinding.FragmentSignUpBinding
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 
-
+/**
+ * A fragment for signing in to the application.
+ */
 class SignInFragment : Fragment() {
 
     private lateinit var auth: FirebaseAuth
@@ -24,7 +25,7 @@ class SignInFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentSignInBinding.inflate(inflater, container, false)
         return binding.root
@@ -37,11 +38,18 @@ class SignInFragment : Fragment() {
         registerEvents()
     }
 
+    /**
+     * Initialize necessary components and resources.
+     * @param view The fragment's view.
+     */
     private fun init(view: View) {
         navControl = Navigation.findNavController(view)
         auth = FirebaseAuth.getInstance()
     }
 
+    /**
+     * Register click events for UI components.
+     */
     private fun registerEvents() {
 
         binding.signupBtn.setOnClickListener {
@@ -73,5 +81,4 @@ class SignInFragment : Fragment() {
             }
         }
     }
-
 }
